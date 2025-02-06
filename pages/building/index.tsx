@@ -21,7 +21,7 @@ Specialized Services: Our skilled craftsmen provide specialized services, includ
             <NavBar />
             <main className="main">
                 <BreadCrumb title='building' list={[{ title: "home", path: "/" }, { title: "services", path: "/" }, { title: 'building' }]} />
-                <ServiceData content={[c1, c2, c3]} title={'Civil Cobstruction'}
+                <ServiceData content={[c1, c2, c3]} title={'Building'}
                     workProgress={['land clearing', 'land surveying', 'sm build']} />
             </main>
             <Footer />

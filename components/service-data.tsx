@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function ServiceData({ title, content, workProgress, summaryWork, image }: {
@@ -17,12 +18,12 @@ export default function ServiceData({ title, content, workProgress, summaryWork,
                                     <div className="widget">
                                         <h4 className="title">All Services</h4>
                                         <div className="category">
-                                            <a href="/civil"><i className="far fa-angle-double-right"></i>Civil Construction</a>
-                                            <a href="/building"><i className="far fa-angle-double-right"></i>Building </a>
-                                            <a href="/plumbing"><i className="far fa-angle-double-right"></i>Plumbing </a>
-                                            <a href="/painting"><i className="far fa-angle-double-right"></i>Painting</a>
-                                            <a href="/electrical"><i className="far fa-angle-double-right"></i>Electrical Installations</a>
-                                            <a href="/tiling"><i className="far fa-angle-double-right"></i>Tiling and Capentry</a>
+                                            <Link href="/civil"><i className="far fa-angle-double-right"></i>Civil Construction</Link>
+                                            <Link href="/building"><i className="far fa-angle-double-right"></i>Building </Link>
+                                            <Link href="/plumbing"><i className="far fa-angle-double-right"></i>Plumbing </Link>
+                                            <Link href="/painting"><i className="far fa-angle-double-right"></i>Painting</Link>
+                                            <Link href="/electrical"><i className="far fa-angle-double-right"></i>Electrical Installations</Link>
+                                            <Link href="/tiling"><i className="far fa-angle-double-right"></i>Tiling and Capentry</Link>
                                         </div>
                                     </div>
                                     <div className="widget">

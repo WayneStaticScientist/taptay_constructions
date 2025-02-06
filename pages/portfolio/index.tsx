@@ -21,7 +21,7 @@ export default function Portfolio() {
                         <div className="row g-4 popup-gallery">
                             {
                                 Array.from({ length: 24 }, (e, i) => {
-                                    const number = (i < 10) ? `0${i + 1}` : `${i + 1}`
+                                    const number = (i < 9) ? `0${i + 1}` : `${i + 1}`
                                     return (
                                         <div className="col-lg-4" key={i}>
                                             <div className="portfolio-item">
