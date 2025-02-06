@@ -14,9 +14,7 @@ export default function WhyChooseUs() {
                         </div>
                         <div className="col-lg-5">
                             <p>
-                                It is a long established fact that a reader will be distracted by the readable
-                                content of a page when will uncover many web sites still in their infancy looking at its
-                                layout.
+                                Choosing Taptay Building & Civil Contractors means choosing a partner you can trust to bring your vision to life with quality, professionalism, and integrity.  Contact us today to discuss your next project!
                             </p>
                             <a href="contact.html" className="theme-btn mt-20">Contact Us<i className="fas fa-arrow-right"></i></a>
                         </div>
@@ -30,9 +28,8 @@ export default function WhyChooseUs() {
                                             <img src="assets/img/icon/money.svg" alt="" />
                                         </div>
                                         <div className="choose-item-info">
-                                            <h4>Affordable Cost</h4>
-                                            <p>There are many variations of passages available the majority have suffered
-                                                alteration in some by injected humour.</p>
+                                            <h4>Unwavering Commitment to Quality</h4>
+                                            <p> We dont just build structures; we build with excellence.  From the foundation to the finishing touches, we adhere to the highest quality standards, ensuring lasting durability and aesthetic appeal.  </p>
                                         </div>
                                     </div>
                                     <div className="choose-item">
@@ -40,9 +37,8 @@ export default function WhyChooseUs() {
                                             <img src="assets/img/icon/team.svg" alt="" />
                                         </div>
                                         <div className="choose-item-info">
-                                            <h4>Our Experience Team</h4>
-                                            <p>There are many variations of passages available the majority have suffered
-                                                alteration in some by injected humour.</p>
+                                            <h4>Comprehensive Range of Services</h4>
+                                            <p> We are your one-stop shop for all your construction needs.  Whether you&apos;re planning a small renovation, a large-scale civil project, or require specialized services like foundation work or intricate carpentry, our diverse expertise covers it all.</p>
                                         </div>
                                     </div>
                                     <div className="choose-item">
@@ -50,9 +46,8 @@ export default function WhyChooseUs() {
                                             <img src="assets/img/icon/certified.svg" alt="" />
                                         </div>
                                         <div className="choose-item-info">
-                                            <h4>Certified Company</h4>
-                                            <p>There are many variations of passages available the majority have suffered
-                                                alteration in some by injected humour.</p>
+                                            <h4>Experienced and Skilled Team</h4>
+                                            <p>Our team comprises seasoned professionals with a wealth of experience in their respective fields.  We invest in continuous training and development to ensure our skills remain at the forefront of industry best practices</p>
                                         </div>
                                     </div>
                                 </div>

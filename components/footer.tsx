@@ -1,3 +1,5 @@
+import { CompanyInfo } from '@/stores/static-info'
+import Link from 'next/link'
 import React from 'react'
 
 export default function Footer() {
@@ -15,9 +17,7 @@ export default function Footer() {
                                             <img src="assets/img/logo/logo-light.png" alt="" />
                                         </a>
                                         <p className="mb-4">
-                                            We are many variations of passages available but the majority have suffered
-                                            alteration some form by injected humour looking layout words believable.
-                                        </p>
+                                            Taptay Building & Civil Contractors (TBCC) is a Harare, Zimbabwe-based construction company specializing in civil works, renovations, painting, plumbing, electrical, foundations, tiling, and carpentry.                                     </p>
                                         <div className="footer-newsletter">
                                             <h6>Subscribe Our Newsletter</h6>
                                             <div className="newsletter-form">
@@ -40,18 +40,12 @@ export default function Footer() {
                                     <div className="footer-widget-box list">
                                         <h4 className="footer-widget-title">Company</h4>
                                         <ul className="footer-list">
-                                            <li><a href="about.html"><i className="far fa-angle-double-right"></i>About Us</a></li>
-                                            <li><a href="blog.html"><i className="far fa-angle-double-right"></i>Update News</a>
+                                            <li><a href="#"><i className="far fa-angle-double-right"></i>About Us</a></li>
+                                            <li><a href="#"><i className="far fa-angle-double-right"></i>Gallery</a>
                                             </li>
-                                            <li><a href="testimonial.html"><i
-                                                className="far fa-angle-double-right"></i>Testimonials</a>
+                                            <li><a href="#"><i className="far fa-angle-double-right"></i>Portifolio</a>
                                             </li>
-                                            <li><a href="contact.html"><i className="far fa-angle-double-right"></i>Contact Us</a>
-                                            </li>
-                                            <li><a href="terms.html"><i className="far fa-angle-double-right"></i>Terms Of
-                                                Service</a></li>
-                                            <li><a href="privacy.html"><i className="far fa-angle-double-right"></i>Privacy
-                                                policy</a></li>
+
                                         </ul>
                                     </div>
                                 </div>
@@ -59,18 +53,12 @@ export default function Footer() {
                                     <div className="footer-widget-box list">
                                         <h4 className="footer-widget-title">Services</h4>
                                         <ul className="footer-list">
-                                            <li><a href="service.html"><i className="far fa-angle-double-right"></i>House
-                                                Planning</a></li>
-                                            <li><a href="service.html"><i className="far fa-angle-double-right"></i>Apartment
-                                                Design</a></li>
-                                            <li><a href="service.html"><i className="far fa-angle-double-right"></i>Building
-                                                Construction</a></li>
-                                            <li><a href="service.html"><i className="far fa-angle-double-right"></i>Architecture
-                                                Design</a></li>
-                                            <li><a href="service.html"><i className="far fa-angle-double-right"></i>Building
-                                                Maintenance</a></li>
-                                            <li><a href="service.html"><i className="far fa-angle-double-right"></i>Design &
-                                                Estimating</a></li>
+                                            <li><Link className="dropdown-item" href="/">Civil Works</Link></li>
+                                            <li><Link className="dropdown-item" href="/">Building</Link></li>
+                                            <li><Link className="dropdown-item" href="/">Plumbing</Link></li>
+                                            <li><Link className="dropdown-item" href="/">Painting</Link></li>
+                                            <li><Link className="dropdown-item" href="/">Electrical Installations</Link></li>
+                                            <li><Link className="dropdown-item" href="/">Tiling And Capentry</Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -84,7 +72,7 @@ export default function Footer() {
                                                 </div>
                                                 <div className="content">
                                                     <h6>Our Address</h6>
-                                                    <p>25/AB Milford Road, New York, USA</p>
+                                                    <p>{CompanyInfo.city} {CompanyInfo.addrees} {CompanyInfo.place}, Zimbabwe</p>
                                                 </div>
                                             </li>
                                             <li>
@@ -93,7 +81,11 @@ export default function Footer() {
                                                 </div>
                                                 <div className="content">
                                                     <h6>Call Us</h6>
-                                                    <a href="tel:+21236547898">+2 123 654 7898</a>
+                                                    {
+                                                        CompanyInfo.phoneNumber.map((e, i) => {
+                                                            return (<a key={i} href={`tel:${e}`}>{e}</a>)
+                                                        })
+                                                    }
                                                 </div>
                                             </li>
                                             <li>
@@ -103,9 +95,9 @@ export default function Footer() {
                                                 <div className="content">
                                                     <h6>Mail Us</h6>
                                                     <a
-                                                        href="https://live.themewild.com/cdn-cgi/l/email-protection#177e79717857726f767a677b723974787a"><span
-                                                            className="__cf_email__"
-                                                            data-cfemail="6f060109002f0a170e021f030a410c0002">[email&#160;protected]</span></a>
+                                                        href={`$mailto:${CompanyInfo.email}`}><span
+
+                                                        >{CompanyInfo.email}</span></a>
                                                 </div>
                                             </li>
                                         </ul>
@@ -120,7 +112,7 @@ export default function Footer() {
                         <div className="row">
                             <div className="col-md-6 align-self-center">
                                 <p className="copyright-text">
-                                    &copy; Copyright <span id="date"></span> <a href="#"> Constro </a> All Rights Reserved.
+                                    &copy; Copyright <span id="date"></span> <a href="#"> TapTay {new Date().getFullYear()} </a> All Rights Reserved.
                                 </p>
                             </div>
                             <div className="col-md-6 align-self-center">

@@ -14,7 +14,7 @@ const Footer = dynamic(() => import("@/components/footer"), { ssr: false });
 export default function Home() {
   return (
     <>
-      <NavBar />
+      <NavBar page={'home'} />
       <main className="main">
         <HeroMain />
         <Patners />

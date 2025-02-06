@@ -1,3 +1,4 @@
+import { CompanyInfo } from '@/stores/static-info'
 import React from 'react'
 
 export default function Counter() {
@@ -12,8 +13,9 @@ export default function Counter() {
                             </div>
                             <div className="content">
                                 <div className="info">
-                                    <span className="counter" data-count="+" data-to="150" data-speed="3000">150</span>
-                                    <span className="unit">k</span>
+                                    <span className="counter" data-count="+" data-to={`${CompanyInfo.projects}`} data-speed="3000">{
+                                        CompanyInfo.projects}</span>
+                                    <span className="unit">+</span>
                                 </div>
                                 <h6 className="title">Projects Done</h6>
                             </div>
@@ -26,8 +28,8 @@ export default function Counter() {
                             </div>
                             <div className="content">
                                 <div className="info">
-                                    <span className="counter" data-count="+" data-to="25" data-speed="3000">25</span>
-                                    <span className="unit">K</span>
+                                    <span className="counter" data-count="+" data-to={`${CompanyInfo.happyClients}`} data-speed="3000">{CompanyInfo.happyClients}</span>
+                                    <span className="unit">+</span>
                                 </div>
                                 <h6 className="title">Happy Clients</h6>
                             </div>
@@ -40,7 +42,7 @@ export default function Counter() {
                             </div>
                             <div className="content">
                                 <div className="info">
-                                    <span className="counter" data-count="+" data-to="120" data-speed="3000">120</span>
+                                    <span className="counter" data-count="+" data-to={`${CompanyInfo.experts}`} data-speed="3000">{CompanyInfo.experts}</span>
                                     <span className="unit">+</span>
                                 </div>
                                 <h6 className="title">Experts Staff</h6>
@@ -54,7 +56,7 @@ export default function Counter() {
                             </div>
                             <div className="content">
                                 <div className="info">
-                                    <span className="counter" data-count="+" data-to="50" data-speed="3000">50</span>
+                                    <span className="counter" data-count="+" data-to={`${CompanyInfo.awards}`} data-speed="3000">{CompanyInfo.awards}</span>
                                     <span className="unit">+</span>
                                 </div>
                                 <h6 className="title">Win Awards</h6>

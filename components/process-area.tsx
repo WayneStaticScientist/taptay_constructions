@@ -24,8 +24,7 @@ export default function ProcessArea() {
                                 </div>
                                 <div className="content">
                                     <h4>Choose Service</h4>
-                                    <p>It is a long established fact that readable
-                                        content of a page.</p>
+                                    <p>pick your service you want at moment</p>
                                 </div>
                             </div>
                         </div>
@@ -37,8 +36,7 @@ export default function ProcessArea() {
                                 </div>
                                 <div className="content">
                                     <h4>Free Consultant</h4>
-                                    <p>It is a long established fact that readable
-                                        content of a page.</p>
+                                    <p>Get feedback from construction guys about availabiliy and timeframe</p>
                                 </div>
                             </div>
                         </div>
@@ -50,8 +48,7 @@ export default function ProcessArea() {
                                 </div>
                                 <div className="content">
                                     <h4>Estimate Budget</h4>
-                                    <p>It is a long established fact that readable
-                                        content of a page.</p>
+                                    <p>In response you will receive qoutations about the service applied for</p>
                                 </div>
                             </div>
                         </div>
@@ -62,9 +59,8 @@ export default function ProcessArea() {
                                     <img src="assets/img/icon/construction-2.svg" alt="" />
                                 </div>
                                 <div className="content">
-                                    <h4>Project Production</h4>
-                                    <p>It is a long established fact that readable
-                                        content of a page.</p>
+                                    <h4> Production</h4>
+                                    <p>Once you agree : Our teams will prepare for the service</p>
                                 </div>
                             </div>
                         </div>

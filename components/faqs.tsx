@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default function Faqs() {
+
     return (
         <>
             <div className="faq-area py-100">
@@ -12,16 +13,19 @@ export default function Faqs() {
                                     <span className="site-title-tagline"><i className="far fa-helmet-safety"></i> Faqs</span>
                                     <h2 className="site-title my-3">General <span>frequently</span> asked questions</h2>
                                 </div>
-                                <p className="mb-3">There are many variations of passages of Lorem Ipsum available,
-                                    but the majority have suffered alteration in some form, by injected humour, or
-                                    randomised words which dont look even.</p>
+                                <p className="mb-3">Here are some Frequently Asked Questions (FAQs) asked
+                                    by our clients
+                                </p>
                                 <p className="mb-4">
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                                    laudantium,
-                                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
-                                    beatae vitae dicta
-                                    sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-                                    fugit.
+                                    We&apos;ve compiled a list of frequently asked questions to help you understand our services and how we can assist you with your construction needs.
+
+                                    What We Do
+
+                                    We offer a comprehensive range of construction services, from renovations and painting to specialized foundation work and civil projects. We handle both residential and commercial projects, big or small.
+
+                                    Where to Find Us
+
+                                    Our office is located in Southerton, Harare. You can find our full address and contact details on our website or marketing materials.
                                 </p>
                                 <a href="contact.html" className="theme-btn mt-2">Have Any Question ?</a>
                             </div>
@@ -32,15 +36,13 @@ export default function Faqs() {
                                     <h2 className="accordion-header" id="headingOne">
                                         <button className="accordion-button" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            <span><i className="far fa-question"></i></span> How Long Does A Service Take ?
+                                            <span><i className="far fa-question"></i></span>What services do you offer?
                                         </button>
                                     </h2>
                                     <div id="collapseOne" className="accordion-collapse collapse show"
                                         aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                         <div className="accordion-body">
-                                            We denounce with righteous indignation and dislike men who
-                                            are so beguiled and demoralized by the charms of pleasure of the moment so
-                                            blinded by desire ante odio dignissim quam vitae pulvinar turpis.
+                                            We offer a wide range of construction services, including civil works, building renovations, painting, plumbing, electrical installations, special foundations, tiling, and carpentry.
                                         </div>
                                     </div>
                                 </div>
@@ -48,16 +50,13 @@ export default function Faqs() {
                                     <h2 className="accordion-header" id="headingTwo">
                                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            <span><i className="far fa-question"></i></span> How Can I Become A Member
-                                            ?
+                                            <span><i className="far fa-question"></i></span>  Where are you located?
                                         </button>
                                     </h2>
                                     <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo"
                                         data-bs-parent="#accordionExample">
                                         <div className="accordion-body">
-                                            We denounce with righteous indignation and dislike men who
-                                            are so beguiled and demoralized by the charms of pleasure of the moment so
-                                            blinded by desire ante odio dignissim quam vitae pulvinar turpis.
+                                            We are located in Southerton, Harare. Our office address is Stand No. 11082, Montague Investments, Cnr Highfields Rd/Craster Rd
                                         </div>
                                     </div>
                                 </div>
@@ -66,15 +65,13 @@ export default function Faqs() {
                                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseThree" aria-expanded="false"
                                             aria-controls="collapseThree">
-                                            <span><i className="far fa-question"></i></span> What Payment Gateway You Support ?
+                                            <span><i className="far fa-question"></i></span>Do you handle both residential and commercial projects?
                                         </button>
                                     </h2>
                                     <div id="collapseThree" className="accordion-collapse collapse"
                                         aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                         <div className="accordion-body">
-                                            We denounce with righteous indignation and dislike men who
-                                            are so beguiled and demoralized by the charms of pleasure of the moment so
-                                            blinded by desire ante odio dignissim quam vitae pulvinar turpis.
+                                            Yes, we cater to both residential and commercial clients.
                                         </div>
                                     </div>
                                 </div>
@@ -83,15 +80,13 @@ export default function Faqs() {
                                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseFour" aria-expanded="false"
                                             aria-controls="collapseFour">
-                                            <span><i className="far fa-question"></i></span> How Can I Cancel My Request ?
+                                            <span><i className="far fa-question"></i></span>  Do you offer specialized foundation work?
                                         </button>
                                     </h2>
                                     <div id="collapseFour" className="accordion-collapse collapse" aria-labelledby="headingFour"
                                         data-bs-parent="#accordionExample">
                                         <div className="accordion-body">
-                                            We denounce with righteous indignation and dislike men who
-                                            are so beguiled and demoralized by the charms of pleasure of the moment so
-                                            blinded by desire ante odio dignissim quam vitae pulvinar turpis.
+                                            Yes, we have expertise in special foundation construction. Contact us for details.
                                         </div>
                                     </div>
                                 </div>

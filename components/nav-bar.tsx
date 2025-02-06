@@ -1,8 +1,8 @@
+import { CompanyInfo } from '@/stores/static-info'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-
-export default function NavBar() {
+export default function NavBar({ page }: { page?: string | null }) {
     return (
         <>
             <header className="header">
@@ -13,15 +13,15 @@ export default function NavBar() {
                                 <div className="header-top-list">
                                     <ul>
                                         <li>
-                                            <a
-                                                href="#"><i
-                                                    className="far fa-envelopes"></i>
+                                            <Link href="#"><i
+                                                className="far fa-envelopes"></i>
                                                 <span className=""
-                                                >#email</span></a>
+                                                >{CompanyInfo.email}</span>
+                                            </Link>
                                         </li>
-                                        <li><a href="tel:+21236547898"><i className="far fa-phone-volume"></i> +2 123 654 7898</a>
+                                        <li><Link href={`tel:${CompanyInfo.phoneNumber[0]}`}><i className="far fa-phone-volume"></i> {CompanyInfo.phoneNumber[0]}</Link >
                                         </li>
-                                        <li><a href="#"><i className="far fa-alarm-clock"></i> Sun - Fri (08AM - 10PM)</a></li>
+
                                     </ul>
                                 </div>
                             </div>
@@ -31,16 +31,16 @@ export default function NavBar() {
                                 </div>
                                 <div className="header-top-lang">
                                     <div className="">
-                                        <a href="#" className="top-lang " ><i
-                                            className="fal fa-globe"></i> Eng</a>
+                                        <Link href="#" className="top-lang " ><i
+                                            className="fal fa-globe"></i> Eng</Link>
                                     </div>
                                 </div>
                                 <div className="header-top-social">
                                     <span>Follow Us: </span>
-                                    <a href="#"><i className="fab fa-facebook"></i></a>
-                                    <a href="#"><i className="fab fa-x-twitter"></i></a>
-                                    <a href="#"><i className="fab fa-instagram"></i></a>
-                                    <a href="#"><i className="fab fa-linkedin"></i></a>
+                                    <Link href="#"><i className="fab fa-facebook"></i></Link>
+                                    <Link href="#"><i className="fab fa-x-twitter"></i></Link>
+                                    <Link href="#"><i className="fab fa-instagram"></i></Link>
+                                    <Link href="#"><i className="fab fa-linkedin"></i></Link>
                                 </div>
                             </div>
                         </div>
@@ -83,29 +83,28 @@ export default function NavBar() {
                                 </div>
                                 <div className="offcanvas-body gap-xl-4">
                                     <ul className="navbar-nav justify-content-end flex-grow-1">
-                                        <li className="nav-item dropdown">
-                                            <a className="nav-link active" href="#"
-                                            >Home</a>
+                                        <li className="nav-item ">
+                                            <Link className={`nav-link ${page == 'home' ? 'active' : ''} `} href="/"
+                                            >Home</Link>
                                         </li>
-                                        <li className="nav-item"><a className="nav-link" href="about.html">About</a></li>
+                                        <li className="nav-item"><Link className={`nav-link ${page == 'about' ? 'active' : ''} `} href="/about">About</Link></li>
                                         <li className="nav-item dropdown">
-                                            <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+                                            <Link className={`nav-link dropdown-toggle ${!page ? 'active' : ''}`} href="#" data-bs-toggle="dropdown">Services</Link>
                                             <ul className="dropdown-menu fade-down">
-                                                <li><Link className="dropdown-item" href="/">Civil Works</Link></li>
-                                                <li><Link className="dropdown-item" href="/">Building</Link></li>
-                                                <li><Link className="dropdown-item" href="/">Plumbing</Link></li>
-                                                <li><Link className="dropdown-item" href="/">Painting</Link></li>
-                                                <li><Link className="dropdown-item" href="/">Electrical Installations</Link></li>
-                                                <li><Link className="dropdown-item" href="/">Tiling And Capentry</Link></li>
+                                                <li><Link className="dropdown-item" href="/civil">Civil Works</Link></li>
+                                                <li><Link className="dropdown-item" href="/building">Building</Link></li>
+                                                <li><Link className="dropdown-item" href="/plumbing">Plumbing</Link></li>
+                                                <li><Link className="dropdown-item" href="/painting">Painting</Link></li>
+                                                <li><Link className="dropdown-item" href="/electrical">Electrical Installations</Link></li>
+                                                <li><Link className="dropdown-item" href="/tiling">Tiling And Capentry</Link></li>
                                             </ul>
                                         </li>
 
-                                        <li className="nav-item dropdown">
-                                            <a className="nav-link " href="#" data-bs-toggle="dropdown">Portfolio</a>
-
+                                        <li className="nav-item ">
+                                            <Link className={`nav-link ${page == 'portfolio' ? 'active' : ''} `} href="/portfolio">Portfolio</Link>
                                         </li>
 
-                                        <li className="nav-item"><a className="nav-link" href="">Contact</a></li>
+                                        <li className="nav-item"><Link className={`nav-link ${page == 'contact' ? 'active' : ''} `} href="/contact">Contact</Link></li>
                                     </ul>
                                     <div className="nav-right">
                                         <div className="search-btn">
@@ -113,8 +112,8 @@ export default function NavBar() {
                                                 className="far fa-search"></i></button>
                                         </div>
                                         <div className="nav-btn">
-                                            <a href="contact.html" className="theme-btn">Let&apos;s Talk<i
-                                                className="fas fa-arrow-right"></i></a>
+                                            <Link href="contact.html" className="theme-btn">Let&apos;s Talk<i
+                                                className="fas fa-arrow-right"></i></Link>
                                         </div>
                                         <button type="button" className="sidebar-btn nav-right-link" data-bs-toggle="offcanvas"
                                             data-bs-target="#sidebarPopup">
@@ -131,9 +130,9 @@ export default function NavBar() {
             </header>
             <div className="sidebar-popup offcanvas offcanvas-end" tabIndex={-1} id="sidebarPopup">
                 <div className="offcanvas-header">
-                    <a href="index-2.html" className="sidebar-popup-logo">
+                    <Link href="index-2.html" className="sidebar-popup-logo">
                         <img src="assets/img/logo/logo.png" alt="" />
-                    </a>
+                    </Link>
                     <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
                         <i className="far fa-xmark"></i>
                     </button>
@@ -141,7 +140,7 @@ export default function NavBar() {
                 <div className="sidebar-popup-wrap offcanvas-body">
                     <div className="sidebar-popup-content">
                         <div className="sidebar-popup-about">
-                            <h4>About Us</h4>
+                            <h4>TapTay</h4>
                             <p>We are a construction company specialized in building , wiring , plumbing , civils works and many more.</p>
                         </div>
                         <div className="sidebar-popup-contact">
@@ -153,10 +152,10 @@ export default function NavBar() {
                                     </div>
                                     <div className="content">
                                         <h6>Email</h6>
-                                        <a
-                                            href="https://live.themewild.com/cdn-cgi/l/email-protection#3f565159507f5a475e524f535a115c5052"><span
-                                                className="__cf_email__"
-                                                data-cfemail="deb7b0b8b19ebba6bfb3aeb2bbf0bdb1b3">[email&#160;protected]</span></a>
+                                        <Link
+                                            href={`mailto:${CompanyInfo.email}`}><span
+                                            >
+                                                {CompanyInfo.email}</span></Link>
                                     </div>
                                 </li>
                                 <li>
@@ -165,7 +164,7 @@ export default function NavBar() {
                                     </div>
                                     <div className="content">
                                         <h6>Phone</h6>
-                                        <a href="tel:+21236547898">+2 123 654 7898</a>
+                                        <Link href={`tel:${CompanyInfo.phoneNumber}`}>{CompanyInfo.phoneNumber[0]}</Link>
                                     </div>
                                 </li>
                                 <li>
@@ -174,17 +173,17 @@ export default function NavBar() {
                                     </div>
                                     <div className="content">
                                         <h6>Address</h6>
-                                        <a href="#">25/B Milford Road, New York</a>
+                                        <Link href="#">{CompanyInfo.addrees} {CompanyInfo.city} {CompanyInfo.place}</Link>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                         <div className="sidebar-popup-social">
                             <h4>Follow Us</h4>
-                            <a href="#"><i className="fab fa-facebook"></i></a>
-                            <a href="#"><i className="fab fa-x-twitter"></i></a>
-                            <a href="#"><i className="fab fa-instagram"></i></a>
-                            <a href="#"><i className="fab fa-linkedin"></i></a>
+                            <Link href="#"><i className="fab fa-facebook"></i></Link>
+                            <Link href="#"><i className="fab fa-x-twitter"></i></Link>
+                            <Link href="#"><i className="fab fa-instagram"></i></Link>
+                            <Link href="#"><i className="fab fa-linkedin"></i></Link>
                         </div>
                     </div>
                 </div>

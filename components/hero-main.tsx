@@ -11,7 +11,8 @@ export default function HeroMain() {
                                 <div className="col-md-12 col-lg-6">
                                     <div className="hero-content">
                                         <h1 className="hero-title" data-animation="fadeInRight" data-delay=".50s">
-                                            We are the leader in <span>construction</span> company
+                                            <span className='mr-3 '>TapTay</span>
+                                            We are the leaders in <span>construction</span> company
                                         </h1>
                                         <p data-animation="fadeInLeft" data-delay=".75s">
                                             We offer best quality construction services in Zimbabwe

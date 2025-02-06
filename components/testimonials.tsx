@@ -1,4 +1,6 @@
+import { ClientTestimonials } from '@/stores/static-info'
 import React from 'react'
+import ReactOwlCarousel from 'react-owl-carousel'
 
 export default function Testimonials() {
     return (
@@ -11,132 +13,61 @@ export default function Testimonials() {
                                 <span className="site-title-tagline"><i className="far fa-helmet-safety"></i> Testimonials</span>
                                 <h2 className="site-title text-white">What Our Client <span>Says</span> about us</h2>
                                 <p className="text-white">
-                                    It is a long established fact that a reader will be distracted by the readable content
-                                    of a page when Internet tend to repeat predefined chunks.
-                                </p>
+                                    Our clients consistently praise our commitment to quality, reliability, and customer satisfaction.  They appreciate our professionalism, attention to detail, and ability to deliver projects on time and within budget.      </p>
                                 <a href="contact.html" className="theme-btn mt-30">Know More <i
                                     className="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                         <div className="col-lg-8">
-                            <div className="testimonial-slider owl-carousel owl-theme wow fadeInUp" data-wow-delay=".25s">
-                                <div className="testimonial-item">
-                                    <div className="testimonial-content">
-                                        <div className="testimonial-author-img">
-                                            <img src="assets/img/testimonial/01.jpg" alt="" />
-                                        </div>
-                                        <div className="testimonial-author-info">
-                                            <h4>Niesha Phips</h4>
-                                            <p>Customer</p>
-                                            <div className="testimonial-rate">
-                                                <i className="fas fa-star"></i>
-                                                <i className="fas fa-star"></i>
-                                                <i className="fas fa-star"></i>
-                                                <i className="fas fa-star"></i>
-                                                <i className="fas fa-star"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="testimonial-quote">
-                                        <div className="testimonial-quote-icon">
-                                            <img src="assets/img/icon/quote.svg" alt="" />
-                                        </div>
-                                        <p>
-                                            There are many variations passage available the majority have suffered of
-                                            alteration in some form by the injected humour or randomised words which look
-                                            even slightly believable.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="testimonial-item">
-                                    <div className="testimonial-content">
-                                        <div className="testimonial-author-img">
-                                            <img src="assets/img/testimonial/02.jpg" alt="" />
-                                        </div>
-                                        <div className="testimonial-author-info">
-                                            <h4>Daniel Porter</h4>
-                                            <p>Customer</p>
-                                            <div className="testimonial-rate">
-                                                <i className="fas fa-star"></i>
-                                                <i className="fas fa-star"></i>
-                                                <i className="fas fa-star"></i>
-                                                <i className="fas fa-star"></i>
-                                                <i className="fas fa-star"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="testimonial-quote">
-                                        <div className="testimonial-quote-icon">
-                                            <img src="assets/img/icon/quote.svg" alt="" />
-                                        </div>
-                                        <p>
-                                            There are many variations passage available the majority have suffered of
-                                            alteration in some form by the injected humour or randomised words which look
-                                            even slightly believable.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="testimonial-item">
-                                    <div className="testimonial-content">
-                                        <div className="testimonial-author-img">
-                                            <img src="assets/img/testimonial/03.jpg" alt="" />
-                                        </div>
-                                        <div className="testimonial-author-info">
-                                            <h4>Ebony Swihart</h4>
-                                            <p>Customer</p>
-                                            <div className="testimonial-rate">
-                                                <i className="fas fa-star"></i>
-                                                <i className="fas fa-star"></i>
-                                                <i className="fas fa-star"></i>
-                                                <i className="fas fa-star"></i>
-                                                <i className="fas fa-star"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="testimonial-quote">
-                                        <div className="testimonial-quote-icon">
-                                            <img src="assets/img/icon/quote.svg" alt="" />
-                                        </div>
-                                        <p>
-                                            There are many variations passage available the majority have suffered of
-                                            alteration in some form by the injected humour or randomised words which look
-                                            even slightly believable.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="testimonial-item">
-                                    <div className="testimonial-content">
-                                        <div className="testimonial-author-img">
-                                            <img src="assets/img/testimonial/04.jpg" alt="" />
-                                        </div>
-                                        <div className="testimonial-author-info">
-                                            <h4>Loreta Jones</h4>
-                                            <p>Customer</p>
-                                            <div className="testimonial-rate">
-                                                <i className="fas fa-star"></i>
-                                                <i className="fas fa-star"></i>
-                                                <i className="fas fa-star"></i>
-                                                <i className="fas fa-star"></i>
-                                                <i className="fas fa-star"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="testimonial-quote">
-                                        <div className="testimonial-quote-icon">
-                                            <img src="assets/img/icon/quote.svg" alt="" />
-                                        </div>
-                                        <p>
-                                            There are many variations passage available the majority have suffered of
-                                            alteration in some form by the injected humour or randomised words which look
-                                            even slightly believable.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            <ReactOwlCarousel
+                                margin={20}
+                                items={2}
+                                height={250}
+                                autoplay
+                                loop
+                                className="testimonial-slider owl-theme wow fadeInUp " data-wow-delay=".25s">
+
+                                {
+                                    ClientTestimonials.map((e, i) => {
+                                        return (
+                                            <div className="testimonial-item" key={i}>
+                                                <div className="testimonial-content">
+                                                    <div className="testimonial-author-img">
+                                                        <img src={e.image} alt="" />
+                                                    </div>
+                                                    <div className="testimonial-author-info">
+                                                        <h4>{e.name}</h4>
+                                                        <p>Customer</p>
+                                                        <div className="testimonial-rate">
+                                                            {
+                                                                Array.from({ length: e.rate }, () => {
+                                                                    return 1
+                                                                }).map((e, i) => {
+                                                                    return (
+                                                                        <i className="fas fa-star" key={i}></i>
+                                                                    )
+                                                                })
+                                                            }
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="testimonial-quote">
+                                                    <div className="testimonial-quote-icon">
+                                                        <img src="assets/img/icon/quote.svg" alt="" />
+                                                    </div>
+                                                    <p>
+                                                        {e.message}
+                                                    </p>
+                                                </div>
+                                            </div>)
+                                    })
+                                }
+
+                            </ReactOwlCarousel>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div >
+            </div >
         </>
     )
 }

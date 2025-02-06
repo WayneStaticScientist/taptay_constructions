@@ -10,9 +10,7 @@ export default function RequestQoute() {
                             <div className="quote-content">
                                 <div className="quote-head">
                                     <h3>Request A Quote</h3>
-                                    <p>It is a long established fact that a reader will be distracted by the
-                                        readable content of majority have suffered alteration page when looking at its
-                                        layout.</p>
+                                    <p>For expert construction services in Harare, reach out to us today.  Contact us directly below.</p>
                                 </div>
                                 <div className="quote-form">
                                     <form action="#">
@@ -41,19 +39,7 @@ export default function RequestQoute() {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="col-lg-6">
-                                                <div className="form-group">
-                                                    <div className="form-icon">
-                                                        <i className="far fa-box"></i>
-                                                        <select className="select">
-                                                            <option value="">Choose Service</option>
-                                                            <option value="1">Service One</option>
-                                                            <option value="2">Service Two</option>
-                                                            <option value="3">Service Three</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
+
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <div className="form-icon">

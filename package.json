@@ -9,15 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "jquery": "^3.7.1",
     "next": "15.1.6",
+    "owl.carousel": "^2.3.4",
     "pure-react-carousel": "^1.32.0",
     "react": "^18.0",
     "react-dom": "^18.0",
+    "react-owl-carousel": "^2.3.3",
     "react-responsive-carousel": "^3.2.23"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@types/jquery": "^3.5.32",
     "@types/node": "^20",
+    "@types/owl.carousel": "^2.3.6",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
