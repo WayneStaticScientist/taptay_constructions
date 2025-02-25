@@ -17,7 +17,7 @@ export default function CompanyCars() {
 
                     {
                         Array.from({ length: 3 }, (e, i) => {
-                            return <div className="col-md-6 col-lg-3" key={i}>
+                            return <div className="col-md-6 col-lg-4" key={i}>
                                 <div className="team-item wow fadeInUp" data-wow-delay=".25s">
                                     <div className="team-img">
                                         <img src={`assets/img/cars/car (${i + 1}).jpeg`} alt="thumb" />
