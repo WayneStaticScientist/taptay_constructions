@@ -103,7 +103,7 @@ export default function NavBar({ page }: { page?: string | null }) {
                                         <li className="nav-item ">
                                             <Link className={`nav-link ${page == 'portfolio' ? 'active' : ''} `} href="/portfolio">Portfolio</Link>
                                         </li>
-
+                                        <li className="nav-item"><Link className={`nav-link ${page == 'currentproject' ? 'active' : ''} `} href="/currentproject">Current Project</Link></li>
                                         <li className="nav-item"><Link className={`nav-link ${page == 'contact' ? 'active' : ''} `} href="/contact">Contact</Link></li>
                                     </ul>
                                     <div className="nav-right">

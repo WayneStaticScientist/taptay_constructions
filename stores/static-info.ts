@@ -1,28 +1,30 @@
 export interface StaticInfo {
     email: string,
-    startYear: number,
-    phoneNumber: string[],
-    companyName: string,
-    projects: number,
-    happyClients: number,
-    experts: number,
-    addrees: string,
-    awards: number,
     city: string,
     place: string
+    awards: number,
+    addrees: string,
+    experts: number,
+    projects: number,
+    startYear: number,
+    companyName: string,
+    assistants: number,
+    officeWorkers: number,
+    phoneNumber: string[],
 }
 export const CompanyInfo: StaticInfo = {
     email: "tapiwakwangwa@yahoo.com",
-    startYear: 2016,
+    startYear: 2010,
     phoneNumber: ["+263772952268", "+263718952268", '+263734061090'],
     addrees: "StandNo 11082",
     city: "Cnr Highfields Rd/Craster Rd",
     place: "Sourtherton Harare",
     companyName: "TapTay",
-    projects: 67,
-    happyClients: 32,
+    projects: 250,
     awards: 12,
-    experts: 21,
+    officeWorkers: 5,
+    assistants: 15,
+    experts: 10,
 }
 export const ClientTestimonials: { name: string, rate: number, message: string, image: string }[] = [
     {

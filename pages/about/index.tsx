@@ -1,6 +1,7 @@
 
 import About from "@/components/about";
 import BreadCrumb from "@/components/bread-crumb";
+import CompanyCars from "@/components/company-cars";
 const Footer = dynamic(() => import("@/components/footer"), { ssr: false });
 const Counter = dynamic(() => import("@/components/counter"), { ssr: false });
 import NavBar from '@/components/nav-bar'
@@ -16,6 +17,7 @@ export default function AboutPage() {
                 <About />
                 <Counter />
                 <Testimonials />
+                <CompanyCars />
                 <ProcessArea />
             </main>
             <Footer />
