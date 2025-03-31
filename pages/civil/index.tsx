@@ -3,7 +3,8 @@ const Footer = dynamic(() => import("@/components/footer"), { ssr: false });
 import NavBar from '@/components/nav-bar'
 import ServiceData from '@/components/service-data';
 import dynamic from 'next/dynamic';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { ImSpinner9 } from 'react-icons/im';
 
 
 export default function Civil() {
@@ -16,21 +17,27 @@ export default function Civil() {
     const c2 = `
   Taptay Building & Civil Contractors is synonymous with quality construction.  We use premium materials, employ skilled craftsmen, and adhere to the highest industry standards to ensure your building stands the test of time.  Our commitment to excellence is evident in every detail.
 `
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+        setLoading(false);
+    }, []);
     return (
         <>
-            <NavBar />
-            <main className="main">
-                <BreadCrumb title='Civil Construction' list={[{ title: "home", path: "/" }, { title: 'civil' }]} />
-                <ServiceData content={[c1, c2]} title={'Civil Construction'}
-                    summaryWork={' Taptay Building & Civil Contractors is your trusted partner for quality construction in the Harare area.  We specialize in residential, commercial, and industrial projects, bringing years of local experience and a commitment to client satisfaction to every build.  From concept to completion, we handle every detail with care, ensuring your project is completed on time and within budget.  Contact us today to discuss your vision!'}
-                    workProgress={['Concept & Design', 'Feasibility Studies & Site Analysis',
-                        'Site Preparation',
-                        'Foundation Construction',
-                        'Structural Work',
-                        'MEP Systems Installation',
-                        'Fixtures & Equipment Installation']} />
-            </main>
-            <Footer />
+            {loading ? <div className="w-screen h-screen flex justify-center items-center ">
+                <ImSpinner9 size={50} className=" animate-spin" />
+            </div> : <> <NavBar />
+                <main className="main">
+                    <BreadCrumb title='Civil Construction' list={[{ title: "home", path: "/" }, { title: 'civil' }]} />
+                    <ServiceData content={[c1, c2]} title={'Civil Construction'}
+                        summaryWork={' Taptay Building & Civil Contractors is your trusted partner for quality construction in the Harare area.  We specialize in residential, commercial, and industrial projects, bringing years of local experience and a commitment to client satisfaction to every build.  From concept to completion, we handle every detail with care, ensuring your project is completed on time and within budget.  Contact us today to discuss your vision!'}
+                        workProgress={['Concept & Design', 'Feasibility Studies & Site Analysis',
+                            'Site Preparation',
+                            'Foundation Construction',
+                            'Structural Work',
+                            'MEP Systems Installation',
+                            'Fixtures & Equipment Installation']} />
+                </main>
+                <Footer /></>}
         </>
     )
 }

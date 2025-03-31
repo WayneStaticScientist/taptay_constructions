@@ -1,5 +1,4 @@
 import React from 'react'
-
 export default function CompanyCars() {
     return (
         <div className="team-area py-100">

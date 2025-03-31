@@ -7,10 +7,16 @@ import "@/styles/css/magnific-popup.min.css";
 import "@/styles/css/nice-select.min.css";
 import "@/styles/css/style.css";
 import type { AppProps } from "next/app";
+import Head from "next/head";
 
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <Component {...pageProps} />
+    <div>
+      <Head>
+        <title>TapTay - Construction Company</title>
+      </Head>
+      <Component {...pageProps} />
+    </div>
   );
 }

@@ -4,8 +4,17 @@ import Script from "next/script";
 export default function Document() {
   return (
     <Html lang="en">
-      <Head >
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+      <Head title="TapTay - Construction Company">
+        <meta name="description" content="TapTay Construction Company - Building your dreams with precision and excellence." />
+        <meta property="og:title" content="TapTay - Construction Company" />
+        <meta property="og:description" content="TapTay Construction Company - Building your dreams with precision and excellence." />
+        <meta property="og:image" content="/assets/img/logo/logo.png" />
+        <meta property="og:url" content="https://taptay.co.zw" />
+        <meta name="twitter:card" content="TapTay constructions" />
+        <meta name="twitter:title" content="TapTay - Construction Company" />
+        <meta name="twitter:description" content="TapTay Construction Company - Building your dreams with precision and excellence." />
+        <meta name="twitter:image" content="/assets/img/logo/logo.png" />
+        <link rel="icon" href="/assets/img/logo/logo.png" />
       </Head>
       <body className="antialiased">
         <Main />

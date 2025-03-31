@@ -4,7 +4,8 @@ const Footer = dynamic(() => import("@/components/footer"), { ssr: false });
 import NavBar from '@/components/nav-bar'
 import ServiceData from '@/components/service-data';
 import dynamic from 'next/dynamic';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { ImSpinner9 } from 'react-icons/im';
 
 export default function PaintingPage() {
     const c1 = `At Taptay Building & Civil Contractors,
@@ -14,27 +15,34 @@ export default function PaintingPage() {
      Give your space a fresh new look with Taptay Building & Civil Contractors' painting services.
      We handle everything from surface preparation to the final coat, minimizing disruption and maximizing impact.
      Enjoy a beautifully painted space that reflects your style and personality.`
-
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+        setLoading(false);
+    }, []);
     return (
         <>
-            <NavBar />
-            < main className="main" >
-                <BreadCrumb title='Painting' list={[{ title: "home", path: "/" },
-                { title: "services", path: "/" },
-                { title: 'painting' }]} />
-                <ServiceData content={[c1, c2]} title={'Painting'}
-                    workProgress={
-                        [
-                            'Interior Painting',
-                            'Exterior Painting',
-                            'Surface Preparation',
-                            'Color Consultation',
-                            'Specialty Finishes',
-                            'Commercial Painting',
-                            'Industrial Painting'
-                        ]} />
-            </main>
-            < Footer />
+            {loading ? <div className="w-screen h-screen flex justify-center items-center ">
+                <ImSpinner9 size={50} className=" animate-spin" />
+            </div> : <> <NavBar />
+                < main className="main" >
+                    <BreadCrumb title='Painting' list={[{ title: "home", path: "/" },
+                    { title: "services", path: "/" },
+                    { title: 'painting' }]} />
+                    <ServiceData content={[c1, c2]} title={'Painting'}
+                        workProgress={
+                            [
+                                'Interior Painting',
+                                'Exterior Painting',
+                                'Surface Preparation',
+                                'Color Consultation',
+                                'Specialty Finishes',
+                                'Commercial Painting',
+                                'Industrial Painting'
+                            ]} />
+                </main>
+                < Footer />
+            </>
+            }
         </>
     )
 }
